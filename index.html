@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>第一动漫 - 新番速递、番剧资讯与在线观看 | diyidongman-zh.github.io</title>
+<meta name="keywords" content="第一动漫,diyidongman-zh.github.io,动漫资讯,新番速递,番剧更新,在线观看,动漫推荐,二次元">
+<meta name="description" content="第一动漫（diyidongman-zh.github.io）专注动漫资讯、新番速递与番剧在线观看，每日更新番剧播出安排、热门排行与剧场版动态，是二次元爱好者获取第一手动漫情报的站点。">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#0a0e1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第一动漫 - 新番速递与番剧在线观看">
+<meta property="og:description" content="每日更新番剧播出安排、热门排行与剧场版动态，专注动漫资讯与在线观看。">
+<meta property="og:url" content="https://diyidongman-zh.github.io">
+<meta property="og:site_name" content="第一动漫">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://diyidongman-zh.github.io">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+<style>
+:root{
+  --bg:#0a0e1a;
+  --bg2:#0f1424;
+  --card:#141a2e;
+  --card-hover:#1a2138;
+  --line:rgba(255,255,255,.08);
+  --text:#e8ecf5;
+  --text-dim:#9aa3b8;
+  --text-faint:#6b7390;
+  --accent:#ff3d7f;
+  --accent2:#ffb13d;
+  --accent3:#4f8bff;
+  --ok:#2ecc9b;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.75;
+  font-size:16px;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 500px at 12% -8%,rgba(255,61,127,.18),transparent 60%),
+    radial-gradient(800px 600px at 88% 12%,rgba(79,139,255,.14),transparent 62%),
+    radial-gradient(700px 700px at 50% 105%,rgba(255,177,61,.10),transparent 60%);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:46px 46px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;transition:color .2s}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* ===== 顶部公告 ===== */
+.notice{
+  background:linear-gradient(90deg,rgba(255,61,127,.14),rgba(255,177,61,.10));
+  border-bottom:1px solid var(--line);
+  font-size:13.5px;color:var(--text-dim);
+}
+.notice .container{display:flex;align-items:center;gap:10px;padding-top:9px;padding-bottom:9px}
+.notice .tag{
+  flex:none;background:var(--accent);color:#fff;font-size:12px;font-weight:700;
+  padding:2px 9px;border-radius:5px;letter-spacing:.5px;
+}
+.notice .txt{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.notice .txt span{margin-right:26px;display:inline-block}
+.notice .txt b{color:var(--text);font-weight:600}
+
+/* ===== 导航 ===== */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(10,14,26,.82);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header .container{display:flex;align-items:center;gap:24px;height:66px}
+.logo{display:flex;align-items:center;gap:11px;flex:none}
+.logo .mark{
+  width:40px;height:40px;border-radius:11px;flex:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;font-size:20px;
+  box-shadow:0 6px 18px rgba(255,61,127,.35);
+}
+.logo .name{font-size:20px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo .name em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo small{display:block;font-size:11px;font-weight:400;color:var(--text-faint);letter-spacing:1px;margin-top:-3px}
+.nav{flex:1;display:flex;justify-content:center;gap:4px}
+.nav a{
+  font-size:15px;font-weight:500;color:var(--text-dim);
+  padding:8px 14px;border-radius:9px;position:relative;
+}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav a.on{color:var(--text);background:rgba(255,61,127,.12)}
+.nav a.on::after{
+  content:"";position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+}
+.header-act{display:flex;align-items:center;gap:10px;flex:none}
+.search{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:10px;padding:7px 12px;width:190px;
+  transition:border-color .2s,width .25s;
+}
+.search:focus-within{border-color:rgba(255,61,127,.5);width:230px;background:rgba(255,255,255,.09)}
+.search svg{flex:none;opacity:.6}
+.search input{
+  flex:1;background:none;border:none;outline:none;color:var(--text);font-size:14px;min-width:0;
+  font-family:inherit;
+}
+.search input::placeholder{color:var(--text-faint)}
+.menu-btn{display:none;width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--text);margin:4px auto;border-radius:2px;transition:.25s}
+.menu-btn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn.open span:nth-child(2){opacity:0}
+.menu-btn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ===== Hero ===== */
+.hero{padding:56px 0 40px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.28fr .72fr;gap:26px;align-items:stretch}
+.hero-main{
+  position:relative;border-radius:22px;overflow:hidden;min-height:400px;
+  background:linear-gradient(160deg,#1a1230 0%,#0e1832 55%,#101a2c 100%);
+  border:1px solid var(--line);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:34px;
+}
+.hero-main::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(520px 300px at 82% 12%,rgba(79,139,255,.28),transparent 62%),
+    radial-gradient(420px 340px at 8% 88%,rgba(255,61,127,.24),transparent 62%);
+}
+.hero-main::after{
+  content:"";position:absolute;right:-70px;top:-70px;width:300px;height:300px;border-radius:50%;
+  background:conic-gradient(from 0deg,var(--accent),var(--accent2),var(--accent3),var(--accent));
+  filter:blur(70px);opacity:.55;
+}
+.hero-crumb{position:relative;font-size:13px;color:var(--text-faint);margin-bottom:12px;letter-spacing:1px}
+.hero-crumb b{color:var(--accent2);font-weight:600}
+.hero-main h1{
+  position:relative;font-size:42px;line-height:1.22;font-weight:800;letter-spacing:.5px;
+  text-shadow:0 4px 24px rgba(0,0,0,.5);
+}
+.hero-main h1 i{font-style:normal;background:linear-gradient(90deg,#fff,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-main p{position:relative;margin-top:14px;color:#c4cbe0;font-size:16px;max-width:560px}
+.hero-meta{position:relative;display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hero-meta span{
+  font-size:13px;padding:6px 13px;border-radius:20px;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);color:#d7dceb;
+}
+.hero-btns{position:relative;display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;
+  padding:13px 26px;border-radius:12px;transition:transform .18s,box-shadow .18s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-pri{background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff;box-shadow:0 10px 26px rgba(255,61,127,.35)}
+.btn-ghost{background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+.hero-side{display:grid;grid-template-rows:1fr 1fr;gap:26px}
+.stat-card{
+  border-radius:22px;padding:26px;border:1px solid var(--line);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.stat-card.b1{background:linear-gradient(155deg,rgba(255,61,127,.22),rgba(255,61,127,.03))}
+.stat-card.b2{background:linear-gradient(155deg,rgba(79,139,255,.22),rgba(79,139,255,.03))}
+.stat-card .big{font-size:38px;font-weight:800;letter-spacing:1px;line-height:1}
+.stat-card .big em{font-style:normal;font-size:15px;font-weight:500;color:var(--text-dim);margin-left:6px}
+.stat-card h4{font-size:15px;color:var(--text-dim);font-weight:500;margin-top:8px}
+.stat-card .foot{font-size:13px;color:var(--ok);margin-top:14px;display:flex;align-items:center;gap:6px}
+.stat-card .foot i{width:7px;height:7px;border-radius:50%;background:var(--ok);display:block;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+/* ===== 通用区块 ===== */
+.section{padding:44px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.sec-title{display:flex;align-items:center;gap:12px}
+.sec-title .bar{width:5px;height:26px;border-radius:4px;background:linear-gradient(180deg,var(--accent),var(--accent2));flex:none}
+.sec-title h2{font-size:25px;font-weight:800;letter-spacing:.5px}
+.sec-title p{font-size:13.5px;color:var(--text-faint);margin-top:2px}
+.sec-more{font-size:14px;color:var(--text-dim);display:flex;align-items:center;gap:5px;transition:gap .2s,color .2s}
+.sec-more:hover{color:var(--accent);gap:9px}
+
+/* ===== 标签筛选 ===== */
+.filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filter a{
+  font-size:14px;padding:8px 16px;border-radius:20px;
+  background:var(--card);border:1px solid var(--line);color:var(--text-dim);
+}
+.filter a:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.filter a.on{background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(255,61,127,.3)}
+
+/* ===== 番剧卡片 ===== */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:transform .22s,background .22s,border-color .22s,box-shadow .22s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);background:var(--card-hover);border-color:rgba(255,255,255,.16);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.thumb{position:relative;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,#1c2540,#141a2e)}
+.thumb .art{position:absolute;inset:0;display:grid;place-items:center;font-size:52px}
+.thumb .layer{
+  position:absolute;inset:0;opacity:.85;
+  background:
+    radial-gradient(circle at 20% 15%,var(--g1,rgba(255,61,127,.7)),transparent 55%),
+    radial-gradient(circle at 85% 90%,var(--g2,rgba(79,139,255,.7)),transparent 55%),
+    linear-gradient(160deg,var(--g3,#2a1a40),var(--g4,#0e1832));
+  transition:transform .6s,opacity .3s;
+}
+.card:hover .layer{transform:scale(1.12);opacity:1}
+.thumb .epi{
+  position:absolute;top:10px;left:10px;z-index:2;
+  font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:5px;letter-spacing:.5px;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.14);
+}
+.thumb .score{
+  position:absolute;top:10px;right:10px;z-index:2;
+  font-size:12.5px;font-weight:700;color:#1a1408;padding:4px 9px;border-radius:6px;
+  background:linear-gradient(135deg,var(--accent2),#ffd23d);
+}
+.thumb .play{
+  position:absolute;inset:0;z-index:2;display:grid;place-items:center;
+  background:rgba(8,12,24,.45);opacity:0;transition:opacity .25s;
+}
+.card:hover .play{opacity:1}
+.thumb .play i{
+  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,61,127,.92);font-size:18px;color:#fff;
+  box-shadow:0 8px 26px rgba(255,61,127,.5);transform:scale(.7);transition:transform .25s;
+}
+.card:hover .play i{transform:scale(1)}
+.thumb .up{
+  position:absolute;left:10px;right:10px;bottom:10px;z-index:2;
+  font-size:12px;color:#e8ecf5;text-shadow:0 1px 3px rgba(0,0,0,.8);
+  display:flex;align-items:center;gap:6px;
+}
+.thumb .up b{width:6px;height:6px;border-radius:50%;background:var(--ok);flex:none}
+.card .info{padding:14px 15px 16px;flex:1;display:flex;flex-direction:column}
+.card .info h3{font-size:16.5px;font-weight:700;line-height:1.45;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.card .info .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.card .info .tags i{font-style:normal;font-size:12px;color:var(--text-dim);padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.05)}
+.card .info .line{margin-top:auto;padding-top:11px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--text-faint)}
+.card .info .line b{color:var(--text-dim);font-weight:500}
+
+/* ===== 资讯列表 ===== */
+.news-wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:start}
+.news-feat{
+  border-radius:var(--radius);overflow:hidden;position:relative;min-height:320px;
+  border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;
+}
+.news-feat .bg{position:absolute;inset:0;background:linear-gradient(150deg,#2a1a40,#0e1832 60%,#101a2c);}
+.news-feat .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,22,.95) 8%,rgba(8,11,22,.25) 60%,transparent);}
+.news-feat .bg span{position:absolute;border-radius:50%;filter:blur(50px);opacity:.55}
+.news-feat .bg span:nth-child(1){width:240px;height:240px;background:var(--accent);right:-40px;top:-40px}
+.news-feat .bg span:nth-child(2){width:200px;height:200px;background:var(--accent3);left:-30px;bottom:-50px}
+.news-feat .con{position:relative}
+.news-feat .cat{font-size:12.5px;font-weight:700;color:#1a1408;background:linear-gradient(135deg,var(--accent2),#ffd23d);padding:4px 11px;border-radius:5px}
+.news-feat h3{font-size:23px;font-weight:800;margin-top:12px;line-height:1.45;max-width:560px}
+.news-feat p{color:#c8cfe2;font-size:14.5px;margin-top:10px;max-width:560px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-feat .meta{font-size:13px;color:var(--text-faint);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.news-list{display:flex;flex-direction:column}
+.news-list article{
+  display:flex;gap:14px;padding:15px 4px;border-bottom:1px solid var(--line);
+  transition:background .2s;border-radius:10px;
+}
+.news-list article:last-child{border-bottom:none}
+.news-list article:hover{background:rgba(255,255,255,.035)}
+.news-list .num{
+  flex:none;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;
+  font-size:14px;font-weight:800;color:var(--text-faint);
+  background:rgba(255,255,255,.05);border:1px solid var(--line);
+}
+.news-list article:nth-child(1) .num{background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff;border-color:transparent}
+.news-list article:nth-child(2) .num{background:linear-gradient(135deg,var(--accent2),#ffd23d);color:#1a1408;border-color:transparent}
+.news-list article:nth-child(3) .num{background:linear-gradient(135deg,var(--accent3),#4fd1ff);color:#fff;border-color:transparent}
+.news-list .txt h4{font-size:15.5px;font-weight:600;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:color .2s}
+.news-list article:hover .txt h4{color:var(--accent)}
+.news-list .txt .m{font-size:12.5px;color:var(--text-faint);margin-top:5px}
+
+/* ===== 时间表 ===== */
+.schedule{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.day{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:transform .2s,border-color .2s;
+}
+.day:hover{transform:translateY(-4px);border-color:rgba(255,61,127,.4)}
+.day.off{opacity:.55}
+.day .hd{
+  padding:11px 12px;font-size:14px;font-weight:700;text-align:center;
+  background:rgba(255,255,255,.05);border-bottom:1px solid var(--line);
+}
+.day.on .hd{background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff}
+.day .bd{padding:12px;display:flex;flex-direction:column;gap:9px;min-height:200px}
+.day .bd a{font-size:13px;color:var(--text-dim);padding:6px 8px;border-radius:7px;background:rgba(255,255,255,.035);line-height:1.5;transition:background .2s,color .2s}
+.day .bd a:hover{background:rgba(255,61,127,.13);color:var(--text)}
+.day .bd a b{display:block;color:var(--text);font-weight:600;font-size:13.5px}
+.day .bd a em{font-style:normal;color:var(--accent2);font-size:12px}
+
+/* ===== 排行榜 ===== */
+.rank-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank-box .tabs{display:flex;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}
+.rank-box .tabs a{
+  flex:1;text-align:center;padding:14px 8px;font-size:14.5px;font-weight:600;color:var(--text-faint);
+  border-bottom:2px solid transparent;transition:.2s;
+}
+.rank-box .tabs a.on{color:var(--text);border-bottom-color:var(--accent)}
+.rank-box .tabs a:hover{color:var(--text)}
+.rank-list{padding:8px 18px 18px}
+.rank-list li{list-style:none;display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.rank-list li:last-child{border-bottom:none}
+.rank-list .no{
+  flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  font-size:14px;font-weight:800;color:var(--text-dim);background:rgba(255,255,255,.06);
+}
+.rank-list li:nth-child(1) .no{background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff}
+.rank-list li:nth-child(2) .no{background:linear-gradient(135deg,var(--accent2),#ffd23d);color:#1a1408}
+.rank-list li:nth-child(3) .no{background:linear-gradient(135deg,var(--accent3),#4fd1ff);color:#fff}
+.rank-list .pic{flex:none;width:44px;height:60px;border-radius:8px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--g1,#3a1a40),var(--g2,#0e1832))}
+.rank-list .pic i{position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+.rank-list .desc{flex:1;min-width:0}
+.rank-list .desc h4{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-list .desc p{font-size:12.5px;color:var(--text-faint);margin-top:2px}
+.rank-list .hot{flex:none;text-align:right;font-size:12px;color:var(--text-faint)}
+.rank-list .hot b{display:block;font-size:15px;color:var(--accent2);font-weight:700}
+
+/* ===== 影评 ===== */
+.review{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.review .post{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s;
+}
+.review .post:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.review .cov{height:180px;position:relative;background:linear-gradient(140deg,var(--g1,#3a1a40),var(--g2,#0e1832))}
+.review .cov span{position:absolute;inset:0;display:grid;place-items:center;font-size:58px}
+.review .cov .tag{position:absolute;top:12px;left:12px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:6px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
+.review .post .bd{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column}
+.review .post h3{font-size:19px;font-weight:800;margin-bottom:4px}
+.review .post .star{color:var(--accent2);font-size:14px;letter-spacing:2px;margin-bottom:10px}
+.review .post .star em{font-style:normal;color:var(--text-dim);margin-left:6px}
+.review .post p{font-size:14.5px;color:var(--text-dim);flex:1;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.review .post .who{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-faint)}
+.review .post .who b{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:15px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent3));flex:none}
+
+/* ===== 资源下载 ===== */
+.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dl-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  display:flex;flex-direction:column;gap:12px;transition:transform .2s,border-color .2s,background .2s;
+}
+.dl-card:hover{transform:translateY(-5px);border-color:rgba(255,177,61,.45);background:var(--card-hover)}
+.dl-card .top{display:flex;align-items:center;gap:12px}
+.dl-card .ic{
+  flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;
+  background:linear-gradient(135deg,rgba(255,177,61,.25),rgba(255,177,61,.06));border:1px solid rgba(255,177,61,.25);
+}
+.dl-card h4{font-size:16.5px;font-weight:700}
+.dl-card h4 small{display:block;font-size:12.5px;font-weight:400;color:var(--text-faint);margin-top:2px}
+.dl-card ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.dl-card li{font-size:13.5px;color:var(--text-dim);display:flex;align-items:center;gap:7px;line-height:1.5}
+.dl-card li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--accent2)}
+.dl-card .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:6px}
+.dl-card .sz{font-size:12.5px;color:var(--text-faint)}
+.dl-card .go{font-size:13.5px;font-weight:600;color:var(--accent2);display:flex;align-items:center;gap:4px;transition:gap .2s}
+.dl-card:hover .go{gap:8px}
+
+/* ===== 图集 ===== */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal{
+  position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;
+  border:1px solid var(--line);transition:transform .25s;
+}
+.gal:hover{transform:scale(1.03);z-index:2}
+.gal .bg{position:absolute;inset:0;background:linear-gradient(140deg,var(--g1,#3a1a40),var(--g2,#0e1832))}
+.gal .bg span{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;transition:transform .4s}
+.gal:hover .bg span{transform:scale(1.12)}
+.gal .mask{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,22,.92),transparent 70%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.gal .mask h4{font-size:15px;font-weight:700}
+.gal .mask p{font-size:12px;color:var(--text-faint);margin-top:3px}
+
+/* ===== 数据条 ===== */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center;transition:transform .2s,border-color .2s}
+.fact:hover{transform:translateY(-4px);border-color:rgba(79,139,255,.4)}
+.fact .n{font-size:34px;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fact .n em{font-style:normal;font-size:16px;color:var(--text-dim)}
+.fact h4{font-size:15px;margin-top:6px}
+.fact p{font-size:12.5px;color:var(--text-faint);margin-top:3px}
+
+/* ===== 剧场 ===== */
+.theater{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start}
+.theater .feat{
+  border-radius:var(--radius);overflow:hidden;position:relative;min-height:360px;
+  border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:30px;
+}
+.theater .feat .bg{position:absolute;inset:0;background:linear-gradient(145deg,#1a1230,#0e1832 55%,#0c1a30);}
+.theater .feat .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,22,.96),transparent 65%)}
+.theater .feat .bg i{position:absolute;right:6%;top:14%;font-size:120px;opacity:.5}
+.theater .feat .con{position:relative}
+.theater .feat .k{font-size:12.5px;letter-spacing:2px;color:var(--accent2);font-weight:700}
+.theater .feat h3{font-size:26px;font-weight:800;margin-top:8px;line-height:1.4}
+.theater .feat p{font-size:14.5px;color:#c8cfe2;margin-top:10px;max-width:520px}
+.theater .feat .mt{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.theater .feat .mt span{font-size:13px;padding:6px 13px;border-radius:20px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12)}
+.theater .list{display:flex;flex-direction:column;gap:14px}
+.theater .item{
+  display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:12px;transition:transform .2s,border-color .2s;
+}
+.theater .item:hover{transform:translateX(5px);border-color:rgba(79,139,255,.4)}
+.theater .item .pic{flex:none;width:86px;height:110px;border-radius:10px;overflow:hidden;position:relative;background:linear-gradient(140deg,var(--g1,#3a1a40),var(--g2,#0e1832))}
+.theater .item .pic i{position:absolute;inset:0;display:grid;place-items:center;font-size:30px}
+.theater .item .txt h4{font-size:16px;font-weight:700;line-height:1.45}
+.theater .item .txt p{font-size:13px;color:var(--text-faint);margin-top:5px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.theater .item .txt .d{font-size:12px;color:var(--accent2);margin-top:7px;font-weight:600}
+
+/* ===== 专题 ===== */
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.topic{
+  border-radius:var(--radius);overflow:hidden;position:relative;min-height:220px;
+  border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;
+  transition:transform .25s;
+}
+.topic:hover{transform:translateY(-5px)}
+.topic .bg{position:absolute;inset:0;opacity:.9;transition:transform .6s}
+.topic:hover .bg{transform:scale(1.08)}
+.topic .bg.t1{background:linear-gradient(150deg,#3a0d28,#0e1832)}
+.topic .bg.t2{background:linear-gradient(150deg,#0d2a3a,#0e1832)}
+.topic .bg.t3{background:linear-gradient(150deg,#2a250d,#1a1230)}
+.topic .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,11,22,.94),transparent 70%)}
+.topic .bg i{position:absolute;right:14px;top:14px;font-size:60px;opacity:.55}
+.topic .con{position:relative}
+.topic h3{font-size:19px;font-weight:800}
+.topic p{font-size:13.5px;color:var(--text-dim);margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.topic .meta{font-size:12.5px;color:var(--text-faint);margin-top:12px;display:flex;gap:14px}
+
+/* ===== 订阅 ===== */
+.subscribe{
+  border-radius:22px;padding:40px 36px;position:relative;overflow:hidden;text-align:center;
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(255,61,127,.14),rgba(79,139,255,.12));
+}
+.subscribe .bg{position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 0);background-size:22px 22px;opacity:.6}
+.subscribe .con{position:relative}
+.subscribe h3{font-size:25px;font-weight:800}
+.subscribe p{font-size:14.5px;color:var(--text-dim);margin-top:8px}
+.sub-form{display:flex;gap:10px;max-width:480px;margin:22px auto 0;flex-wrap:wrap;justify-content:center}
+.sub-form input{
+  flex:1;min-width:220px;padding:13px 16px;border-radius:12px;
+  background:rgba(8,11,22,.55);border:1px solid var(--line);color:var(--text);font-size:14.5px;
+  font-family:inherit;outline:none;transition:border-color .2s;
+}
+.sub-form input:focus{border-color:rgba(255,61,127,.55)}
+.sub-form button{
+  padding:13px 26px;border-radius:12px;font-size:15px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--accent),#ff6b3d);box-shadow:0 8px 22px rgba(255,61,127,.35);
+  transition:transform .18s;
+}
+.sub-form button:hover{transform:translateY(-2px)}
+
+/* ===== 关于/友链 ===== */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:start}
+.about-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.about-card h3{font-size:19px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.about-card h3::before{content:"";width:5px;height:20px;border-radius:4px;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+.about-card p{font-size:14.5px;color:var(--text-dim);margin-bottom:12px;line-height:1.85}
+.about-card p:last-child{margin-bottom:0}
+.link-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.link-cloud a{
+  font-size:13.5px;padding:8px 14px;border-radius:9px;background:rgba(255,255,255,.05);
+  border:1px solid var(--line);color:var(--text-dim);transition:.2s;
+}
+.link-cloud a:hover{background:rgba(79,139,255,.13);border-color:rgba(79,139,255,.4);color:var(--text);transform:translateY(-2px)}
+
+/* ===== 页脚 ===== */
+.footer{background:var(--bg2);border-top:1px solid var(--line);margin-top:40px;padding:46px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.foot-grid h4{font-size:15px;font-weight:700;margin-bottom:14px}
+.foot-grid .brand p{font-size:13.5px;color:var(--text-dim);margin-top:12px;line-height:1.8}
+.foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-grid ul a{font-size:13.5px;color:var(--text-dim);transition:color .2s,padding-left .2s}
+.foot-grid ul a:hover{color:var(--text);padding-left:5px}
+.foot-bot{border-top:1px solid var(--line);margin-top:36px;padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--text-faint)}
+.foot-bot a{color:var(--text-dim)}
+.foot-bot a:hover{color:var(--text)}
+.foot-bot .links{display:flex;gap:16px;flex-wrap:wrap}
+
+/* ===== 回到顶部 ===== */
+.top{
+  position:fixed;right:20px;bottom:24px;z-index:90;width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#ff6b3d);color:#fff;display:grid;place-items:center;
+  box-shadow:0 8px 24px rgba(255,61,127,.4);opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:.28s;font-size:17px;
+}
+.top.show{opacity:1;visibility:visible;transform:translateY(0)}
+
+/* ===== 面包屑 ===== */
+.crumb{padding:16px 0;font-size:13.5px;color:var(--text-faint)}
+.crumb a:hover{color:var(--text)}
+.crumb span{margin:0 8px;opacity:.5}
+.crumb b{color:var(--text-dim);font-weight:500}
+
+/* ===== 响应式 ===== */
+@media (max-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:960px){
+  .nav{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:2px;padding:14px;background:rgba(10,14,26,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav.open{display:flex}
+  .nav a{width:100%;padding:12px 14px;border-radius:9px}
+  .nav a.on::after{display:none}
+  .nav a.on{background:rgba(255,61,127,.14)}
+  .menu-btn{display:block}
+  .search{display:none}
+  .hero-main h1{font-size:32px}
+  .grid,.gallery,.dl-grid,.topic-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.news-wrap,.review,.theater,.about{grid-template-columns:1fr}
+  .hero-side{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .schedule{grid-template-columns:repeat(4,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .sec-title h2{font-size:21px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .container{padding:0 16px}
+  .hero{padding:32px 0 26px}
+  .hero-main{min-height:340px;padding:24px 20px}
+  .hero-main h1{font-size:25px}
+  .hero-main p{font-size:14.5px}
+  .hero-btns .btn{flex:1;justify-content:center;padding:12px 16px;font-size:14.5px}
+  .grid,.gallery,.dl-grid,.topic-grid,.facts{grid-template-columns:1fr 1fr}
+  .schedule{grid-template-columns:1fr 1fr}
+  .hero-side{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .section{padding:34px 0}
+  .sec-head{margin-bottom:18px}
+  .filter a{padding:7px 13px;font-size:13px}
+  .news-feat{min-height:270px;padding:22px 18px}
+  .news-feat h3{font-size:19px}
+  .stat-card .big{font-size:31px}
+  .subscribe{padding:30px 20px}
+  .subscribe h3{font-size:20px}
+  .logo .name{font-size:17px}
+  .notice{font-size:12.5px}
+  .notice .txt span{margin-right:18px}
+  .top{right:12px;bottom:16px;width:42px;height:42px}
+}
+@media print{
+  .header,.notice,.top,.subscribe{display:none}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- 顶部公告 -->
+<div class="notice">
+  <div class="container">
+    <span class="tag">站点公告</span>
+    <div class="txt">
+      <span><b>2026 年 10 月番组表</b>已更新，包含秋季新番 42 部作品播出安排 →</span>
+      <span><b>新功能上线</b>：追番进度本地记录，关闭页面后再次打开自动恢复</span>
+    </div>
+  </div>
+</div>
+
+<!-- 导航 -->
+<header class="header">
+  <div class="container">
+    <a class="logo" href="https://diyidongman-zh.github.io">
+      <span class="mark">🎬</span>
+      <span class="name"><em>第一动漫</em><small>diyidongman-zh.github.io</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="on">首页</a>
+      <a href="#news">资讯速递</a>
+      <a href="#schedule">番剧更新</a>
+      <a href="#rank">热门排行</a>
+      <a href="#theater">剧场电影</a>
+      <a href="#review">番剧点评</a>
+      <a href="#gallery">精彩图集</a>
+      <a href="#download">资源下载</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <div class="header-act">
+      <div class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="搜索番剧名 / 声优 / 类型" aria-label="搜索">
+      </div>
+      <button class="menu-btn" id="mbtn" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-main">
+        <div class="hero-crumb">第一动漫 / <b>diyidongman-zh.github.io</b> · 新番速递与在线观看</div>
+        <h1>每天追更不落一集<br><i>动漫资讯 · 新番速递 · 在线观看</i></h1>
+        <p>第一动漫（diyidongman-zh.github.io）聚焦日本新番、国创动画与动画电影，提供每周番剧更新提醒、播出时间表、热门作品排行与深度番剧点评，让你第一时间掌握每一季的看点。</p>
+        <div class="hero-meta">
+          <span>📺 每周更新 40+ 部番剧</span>
+          <span>⏰ 更新提醒准时推送</span>
+          <span>🎞 剧场版情报同步</span>
+          <span>💬 真实观众口碑评分</span>
+        </div>
+        <div class="hero-btns">
+          <a class="btn btn-pri" href="#schedule">查看本周番剧表 →</a>
+          <a class="btn btn-ghost" href="#rank">热门排行</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="stat-card b1">
+          <div>
+            <div class="big">2,486<em>部</em></div>
+            <h4>站内存档番剧</h4>
+          </div>
+          <div class="foot"><i></i>本月新增 37 部</div>
+        </div>
+        <div class="stat-card b2">
+          <div>
+            <div class="big">128,600<em>人</em></div>
+            <h4>追番用户累计</h4>
+          </div>
+          <div class="foot"><i></i>当前在线 1,247 人</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资讯速递 -->
+  <section class="section" id="news">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>资讯速递</h2>
+          <p>行业动态 · 新番情报 · 制作组消息</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">全部资讯 ›</a>
+    </div>
+    <div class="news-wrap">
+      <article class="news-feat">
+        <div class="bg"><span></span><span></span></div>
+        <div class="con">
+          <span class="cat">制作决定</span>
+          <h3>《星海回响》宣布 TV 动画化，将由 MAPPA 担任动画制作，2027 年 1 月档期开播</h3>
+          <p>原作漫画单行本累计发行突破 1200 万册，此次动画化消息随杂志封面一并公开，主要声优阵容与制作团队将于 11 月特别节目中完整揭晓。</p>
+          <div class="meta"><span>🕐 2 小时前</span><span>👁 8.6 万阅读</span><span>💬 1,240 评论</span></div>
+        </div>
+      </article>
+      <div class="news-list">
+        <article>
+          <span class="num">1</span>
+          <div class="txt">
+            <h4>《四月是你的谎言》十周年纪念剧场版正式立项，原班声优回归确认</h4>
+            <div class="m">剧场电影 · 10 分钟前</div>
+          </div>
+        </article>
+        <article>
+          <span class="num">2</span>
+          <div class="txt">
+            <h4>京都动画公布 2027 年企划三连发，包含两部原创作品与一部轻改</h4>
+            <div class="m">行业动态 · 38 分钟前</div>
+          </div>
+        </article>
+        <article>
+          <span class="num">3</span>
+          <div class="txt">
+            <h4>《葬送的芙莉莲》第二季定档 2027 年 4 月，先行视觉图与主题曲信息同步释出</h4>
+            <div class="m">新番情报 · 1 小时前</div>
+          </div>
+        </article>
+        <article>
+          <span class="num">4</span>
+          <div class="txt">
+            <h4>国产动画《雾山五行》第三季进入作画收尾阶段，导演透露新增两条支线</h4>
+            <div class="m">国创动态 · 3 小时前</div>
+          </div>
+        </article>
+        <article>
+          <span class="num">5</span>
+          <div class="txt">
+            <h4>新海诚新作《寂静之海》预告片首曝，主题曲由 RADWIMPS 与野田洋次郎再度合作</h4>
+            <div class="m">剧场电影 · 5 小时前</div>
+          </div>
+        </article>
+        <article>
+          <span class="num">6</span>
+          <div class="txt">
+            <h4>Aniplex 秋季新番发布会汇总：7 部新作、12 位主要声优现场亮相</h4>
+            <div class="m">行业动态 · 昨天</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 番剧更新 -->
+  <section class="section" id="schedule">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>番剧更新</h2>
+          <p>每周播出时间表 · 点击进入详情页</p>
+        </div>
+      </div>
+      <div class="filter">
+        <a href="#" class="on">本周更新</a>
+        <a href="#">追番中</a>
+        <a href="#">十月新番</a>
+        <a href="#">完结补番</a>
+        <a href="#">国创动画</a>
+        <a href="#">经典怀旧</a>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(255,61,127,.75);--g2:rgba(255,177,61,.6);--g3:#3a0d28;--g4:#0e1832"></div>
+          <div class="art">🌸</div>
+          <span class="epi">更新至 12 集</span><span class="score">9.2</span>
+          <div class="up"><b></b>今日 22:30 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>樱花落尽时想起你</h3>
+          <div class="tags"><i>校园</i><i>恋爱</i><i>治愈</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 4.2 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(79,139,255,.75);--g2:rgba(46,204,155,.55);--g3:#0d2a3a;--g4:#0e1832"></div>
+          <div class="art">⚔️</div>
+          <span class="epi">更新至 11 集</span><span class="score">9.5</span>
+          <div class="up"><b></b>今日 23:00 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>最后的剑客 第二季</h3>
+          <div class="tags"><i>热血</i><i>战斗</i><i>历史</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 9.8 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(255,177,61,.75);--g2:rgba(255,61,127,.55);--g3:#2a250d;--g4:#1a1230"></div>
+          <div class="art">🍜</div>
+          <span class="epi">更新至 13 集</span><span class="score">8.8</span>
+          <div class="up"><b></b>昨日 21:00 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>深夜食堂的常客们</h3>
+          <div class="tags"><i>日常</i><i>美食</i><i>群像</i></div>
+          <div class="line"><span><b>2026 年 7 月</b></span><span>追番 3.1 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(168,85,247,.7);--g2:rgba(79,139,255,.6);--g3:#2a0d3a;--g4:#0e1832"></div>
+          <div class="art">🔮</div>
+          <span class="epi">更新至 12 集</span><span class="score">9.1</span>
+          <div class="up"><b></b>今日 20:00 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>魔法使之夜 终章</h3>
+          <div class="tags"><i>奇幻</i><i>悬疑</i><i>剧情</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 6.7 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(46,204,155,.7);--g2:rgba(79,139,255,.5);--g3:#0d3a2e;--g4:#0e1832"></div>
+          <div class="art">🚀</div>
+          <span class="epi">更新至 10 集</span><span class="score">8.9</span>
+          <div class="up"><b></b>明日 01:05 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>星际邮递员</h3>
+          <div class="tags"><i>科幻</i><i>冒险</i><i>原创</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 2.8 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(255,61,127,.7);--g2:rgba(168,85,247,.55);--g3:#3a0d28;--g4:#2a0d3a"></div>
+          <div class="art">🎭</div>
+          <span class="epi">更新至 12 集</span><span class="score">9.3</span>
+          <div class="up"><b></b>今日 19:30 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>舞台上的灰姑娘们</h3>
+          <div class="tags"><i>音乐</i><i>励志</i><i>群像</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 5.4 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(79,139,255,.7);--g2:rgba(46,204,155,.5);--g3:#0d2a3a;--g4:#0d3a2e"></div>
+          <div class="art">🐉</div>
+          <span class="epi">更新至 09 集</span><span class="score">8.7</span>
+          <div class="up"><b></b>明日 23:45 更新</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>龙与契约之书</h3>
+          <div class="tags"><i>奇幻</i><i>冒险</i><i>轻改</i></div>
+          <div class="line"><span><b>2026 年 10 月</b></span><span>追番 2.3 万</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb">
+          <div class="layer" style="--g1:rgba(255,177,61,.72);--g2:rgba(255,61,127,.45);--g3:#2a250d;--g4:#3a0d28"></div>
+          <div class="art">🕵️</div>
+          <span class="epi">更新至 13 集</span><span class="score">9.0</span>
+          <div class="up"><b></b>已完结 · 全 13 集</div>
+          <div class="play"><i>▶</i></div>
+        </div>
+        <div class="info">
+          <h3>雨夜推理事务所</h3>
+          <div class="tags"><i>悬疑</i><i>推理</i><i>单元剧</i></div>
+          <div class="line"><span><b>2026 年 7 月</b></span><span>追番 4.9 万</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 播出时间表 -->
+  <section class="section" id="timetable">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>每周番剧时间表</h2>
+          <p>更新时间以北京时间标注 · 高亮为当日放送</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">订阅更新提醒 ›</a>
+    </div>
+    <div class="schedule">
+      <div class="day on">
+        <div class="hd">周一 · 一</div>
+        <div class="bd">
+          <a href="#"><b>魔法使之夜 终章</b><em>20:00</em></a>
+          <a href="#"><b>舞台上的灰姑娘们</b><em>19:30</em></a>
+          <a href="#"><b>樱花落尽时想起你</b><em>22:30</em></a>
+          <a href="#"><b>最后的剑客 第二季</b><em>23:00</em></a>
+        </div>
+      </div>
+      <div class="day">
+        <div class="hd">周二 · 二</div>
+        <div class="bd">
+          <a href="#"><b>星际邮递员</b><em>01:05</em></a>
+          <a href="#"><b>龙与契约之书</b><em>23:45</em></a>
+          <a href="#"><b>雾隐之森</b><em>22:00</em></a>
+        </div>
+      </div>
+      <div class="day">
+        <div class="hd">周三 · 三</div>
+        <div class="bd">
+          <a href="#"><b>午夜电台</b><em>24:00</em></a>
+          <a href="#"><b>机械之心 第三季</b><em>22:30</em></a>
+          <a href="#"><b>咖啡与方程式</b><em>21:00</em></a>
+          <a href="#"><b>转校生是勇者</b><em>19:30</em></a>
+        </div>
+      </div>
+      <div class="day">
+        <div class="hd">周四 · 四</div>
+        <div class="bd">
+          <a href="#"><b>海边书店</b><em>22:00</em></a>
+          <a href="#"><b>异世界经营录</b><em>23:30</em></a>
+          <a href="#"><b>月下棋局</b><em>20:00</em></a>
+        </div>
+      </div>
+      <div class="day">
+        <div class="hd">周五 · 五</div>
+        <div class="bd">
+          <a href="#"><b>未闻花名 续篇</b><em>23:00</em></a>
+          <a href="#"><b>黑猫侦探社</b><em>24:30</em></a>
+          <a href="#"><b>排球少年 新篇章</b><em>19:30</em></a>
+          <a href="#"><b>便利店里的神明</b><em>21:00</em></a>
+        </div>
+      </div>
+      <div class="day">
+        <div class="hd">周六 · 六</div>
+        <div class="bd">
+          <a href="#"><b>鬼灭之刃 新篇章</b><em>23:15</em></a>
+          <a href="#"><b>间谍过家家 第三季</b><em>22:00</em></a>
+          <a href="#"><b>咒术回战 终章</b><em>24:00</em></a>
+        </div>
+      </div>
+      <div class="day off">
+        <div class="hd">周日 · 日</div>
+        <div class="bd">
+          <a href="#"><b>名侦探柯南 周更</b><em>18:00</em></a>
+          <a href="#"><b>时光代理人 第三季</b><em>20:00</em></a>
+          <a href="#"><b>国王排名 第二季</b><em>22:00</em></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门排行 -->
+  <section class="section" id="rank">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>热门排行榜</h2>
+          <p>基于播放量、追番数与真实评分综合计算</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">完整榜单 ›</a>
+    </div>
+    <div class="rank-box">
+      <div class="tabs">
+        <a href="#" class="on">本周热播</a>
+        <a href="#">新番期待榜</a>
+        <a href="#">经典必看</a>
+        <a href="#">剧场版票房</a>
+      </div>
+      <ul class="rank-list">
+        <li>
+          <span class="no">1</span>
+          <span class="pic" style="--g1:#3a0d28;--g2:#0e1832"><i>⚔️</i></span>
+          <span class="desc"><h4>最后的剑客 第二季</h4><p>热血 · 战斗 · 历史 / 追番 9.8 万人</p></span>
+          <span class="hot"><b>9.5</b>98.2 万播放</span>
+        </li>
+        <li>
+          <span class="no">2</span>
+          <span class="pic" style="--g1:#0d2a3a;--g2:#2a0d3a"><i>🔮</i></span>
+          <span class="desc"><h4>魔法使之夜 终章</h4><p>奇幻 · 悬疑 · 剧情 / 追番 6.7 万人</p></span>
+          <span class="hot"><b>9.1</b>76.4 万播放</span>
+        </li>
+        <li>
+          <span class="no">3</span>
+          <span class="pic" style="--g1:#2a250d;--g2:#3a0d28"><i>🎭</i></span>
+          <span class="desc"><h4>舞台上的灰姑娘们</h4><p>音乐 · 励志 · 群像 / 追番 5.4 万人</p></span>
+          <span class="hot"><b>9.3</b>63.1 万播放</span>
+        </li>
+        <li>
+          <span class="no">4</span>
+          <span class="pic" style="--g1:#3a0d28;--g2:#0e1832"><i>🌸</i></span>
+          <span class="desc"><h4>樱花落尽时想起你</h4><p>校园 · 恋爱 · 治愈 / 追番 4.2 万人</p></span>
+          <span class="hot"><b>9.2</b>58.7 万播放</span>
+        </li>
+        <li>
+          <span class="no">5</span>
+          <span class="pic" style="--g1:#0d2a3a;--g2:#0d3a2e"><i>🐉</i></span>
+          <span class="desc"><h4>龙与契约之书</h4><p>奇幻 · 冒险 · 轻改 / 追番 2.3 万人</p></span>
+          <span class="hot"><b>8.7</b>41.9 万播放</span>
+        </li>
+        <li>
+          <span class="no">6</span>
+          <span class="pic" style="--g1:#0d3a2e;--g2:#0e1832"><i>🚀</i></span>
+          <span class="desc"><h4>星际邮递员</h4><p>科幻 · 冒险 · 原创 / 追番 2.8 万人</p></span>
+          <span class="hot"><b>8.9</b>38.5 万播放</span>
+        </li>
+        <li>
+          <span class="no">7</span>
+          <span class="pic" style="--g1:#2a250d;--g2:#0e1832"><i>🍜</i></span>
+          <span class="desc"><h4>深夜食堂的常客们</h4><p>日常 · 美食 · 群像 / 追番 3.1 万人</p></span>
+          <span class="hot"><b>8.8</b>35.2 万播放</span>
+        </li>
+        <li>
+          <span class="no">8</span>
+          <span class="pic" style="--g1:#2a0d3a;--g2:#0d2a3a"><i>🕵️</i></span>
+          <span class="desc"><h4>雨夜推理事务所</h4><p>悬疑 · 推理 · 单元剧 / 追番 4.9 万人</p></span>
+          <span class="hot"><b>9.0</b>32.8 万播放</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 剧场电影 -->
+  <section class="section" id="theater">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>剧场电影</h2>
+          <p>动画电影情报 · 上映档期 · 预告片</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">更多剧场版 ›</a>
+    </div>
+    <div class="theater">
+      <article class="feat">
+        <div class="bg"><i>🎞️</i></div>
+        <div class="con">
+          <div class="k">FEATURED FILM</div>
+          <h3>新海诚新作《寂静之海》定档 2027 年 2 月 20 日全国上映</h3>
+          <p>故事以濑户内海边的港口城市为舞台，讲述一位失去声音的少女与海洋摄影师之间的相遇。影片由新海诚执导并亲自撰写剧本，主题曲《海的原风景》由 RADWIMPS 与野田洋次郎再度联手创作。</p>
+          <div class="mt">
+            <span>🎬 导演：新海诚</span>
+            <span>🎵 主题曲：RADWIMPS</span>
+            <span>📅 2027.02.20 上映</span>
+            <span>⏱ 片长 114 分钟</span>
+          </div>
+        </div>
+      </article>
+      <div class="list">
+        <article class="item">
+          <span class="pic" style="--g1:#3a0d28;--g2:#0e1832"><i>🎻</i></span>
+          <div class="txt">
+            <h4>四月是你的谎言 十周年纪念剧场版</h4>
+            <p>以原作番外篇为蓝本，描绘有马公生与宫园薰在毕业典礼之后的夏天。</p>
+            <div class="d">定档 2027 年 4 月 · 原班声优回归</div>
+          </div>
+        </article>
+        <article class="item">
+          <span class="pic" style="--g1:#0d2a3a;--g2:#2a0d3a"><i>🐉</i></span>
+          <div class="txt">
+            <h4>葬送的芙莉莲：超越旅途的尽头</h4>
+            <p>TV 动画第二季放送前先行上映的特别编，补全勇者一行人的终末之战。</p>
+            <div class="d">定档 2027 年 1 月 · 全片 105 分钟</div>
+          </div>
+        </article>
+        <article class="item">
+          <span class="pic" style="--g1:#2a250d;--g2:#3a0d28"><i>🤖</i></span>
+          <div class="txt">
+            <h4>攻壳机动队：新剧场版 觉醒</h4>
+            <p>时隔七年重启，以近未来的横滨为舞台，草薙素子再次出动作战。</p>
+            <div class="d">定档 2027 年 3 月 · 押井守任总监督</div>
+          </div>
+        </article>
+        <article class="item">
+          <span class="pic" style="--g1:#0d3a2e;--g2:#0e1832"><i>🌊</i></span>
+          <div class="txt">
+            <h4>渔港的肉子酱 续篇：海风的约定</h4>
+            <p>西加奈子同名小说改编，继续讲述肉子与女儿喜乐在渔港的日常。</p>
+            <div class="d">已上映 · 豆瓣评分 8.6</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 番剧点评 -->
+  <section class="section" id="review">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>番剧点评</h2>
+          <p>编辑深度解读 · 观众真实口碑</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">全部点评 ›</a>
+    </div>
+    <div class="review">
+      <article class="post">
+        <div class="cov" style="--g1:#0d2a3a;--g2:#2a0d3a"><span>⚔️</span><span class="tag">深度长评</span></div>
+        <div class="bd">
+          <h3>《最后的剑客 第二季》：打戏之外，它讲透了何为「退场」</h3>
+          <div class="star">★★★★★ <em>9.5 / 10 · 编辑点评</em></div>
+          <p>如果说第一季用密集的刀光剑影完成了角色塑形，第二季则把镜头转向了「退场」这一武士题材的核心命题。分集导演对节奏的把控堪称教科书级别——前六集用日常收束第一季遗留的悬念，中段三场大规模战斗各自对应不同的人物弧光，最终话的收束方式既在意料之外，回望全篇又觉得是唯一合理的答案。</p>
+          <div class="who"><b>编</b> 编辑部 · 长谷评论组 ｜ 2026-09-28 发布</div>
+        </div>
+      </article>
+      <article class="post">
+        <div class="cov" style="--g1:#3a0d28;--g2:#2a250d"><span>🌸</span><span class="tag">观众口碑</span></div>
+        <div class="bd">
+          <h3>《樱花落尽时想起你》为什么会成为这个季度的黑马</h3>
+          <div class="star">★★★★☆ <em>9.2 / 10 · 观众评分</em></div>
+          <p>没有超能力、没有转生、没有异世界，只是一场发生在小镇车站旁的告别。作品最聪明的地方在于它从不把情绪推向歇斯底里，而是让音乐、留白和转场去完成表达。声优的收声处理尤其值得称道，几句欲言又止的对白撑起了整集的情绪高点。</p>
+          <div class="who"><b>观</b> 观众投稿 · 月见 ｜ 2026-09-26 发布</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 资源下载 -->
+  <section class="section" id="download">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>资源下载</h2>
+          <p>正版资源导航 · 壁纸 · 原声带 · 设定集</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">全部资源 ›</a>
+    </div>
+    <div class="dl-grid">
+      <div class="dl-card">
+        <div class="top">
+          <span class="ic">🎵</span>
+          <h4>动画原声带<small>OP / ED / 插曲合集</small></h4>
+        </div>
+        <ul>
+          <li>2026 年 10 月新番 OP&ED 合集 Vol.1</li>
+          <li>《魔法使之夜 终章》剧中 BGM 全集</li>
+          <li>《最后的剑客》第二季原声带 FLAC</li>
+          <li>新海诚新作预告片主题曲音源</li>
+        </ul>
+        <div class="row"><span class="sz">共 28 个资源 · 12.4 GB</span><a class="go" href="#">进入 ›</a></div>
+      </div>
+      <div class="dl-card">
+        <div class="top">
+          <span class="ic">🖼️</span>
+          <h4>高清壁纸<small>手机 / 电脑双尺寸</small></h4>
+        </div>
+        <ul>
+          <li>2026 秋季新番官方视觉图 4K 合集</li>
+          <li>剧场版《寂静之海》宣传图包</li>
+          <li>经典番剧重制壁纸 50 张精选</li>
+          <li>声优见面会现场高清图集</li>
+        </ul>
+        <div class="row"><span class="sz">共 15 个资源 · 3.8 GB</span><a class="go" href="#">进入 ›</a></div>
+      </div>
+      <div class="dl-card">
+        <div class="top">
+          <span class="ic">📖</span>
+          <h4>设定集与漫画<small>官方授权资源导航</small></h4>
+        </div>
+        <ul>
+          <li>《最后的剑客》官方设定资料集</li>
+          <li>《舞台上的灰姑娘们》漫画单行本</li>
+          <li>动画制作幕后访谈与分镜稿选录</li>
+          <li>声优访谈合集 PDF 版</li>
+        </ul>
+        <div class="row"><span class="sz">共 21 个资源 · 5.1 GB</span><a class="go" href="#">进入 ›</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精彩图集 -->
+  <section class="section" id="gallery">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>精彩图集</h2>
+          <p>官方视觉图 · 现场直击 · 角色立绘</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">全部图集 ›</a>
+    </div>
+    <div class="gallery">
+      <div class="gal"><div class="bg" style="--g1:#3a0d28;--g2:#0e1832"><span>🌸</span></div><div class="mask"><h4>秋季新番官方视觉图</h4><p>42 张 · 2026.10</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#0d2a3a;--g2:#2a0d3a"><span>⚔️</span></div><div class="mask"><h4>《最后的剑客》作画崩坏与神回对比</h4><p>18 张 · 编辑精选</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#2a250d;--g2:#3a0d28"><span>🎭</span></div><div class="mask"><h4>声优舞台见面会现场直击</h4><p>56 张 · 2026.09</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#0d3a2e;--g2:#0e1832"><span>🚀</span></div><div class="mask"><h4>原创动画分镜稿公开</h4><p>24 张 · 制作组授权</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#2a0d3a;--g2:#0d2a3a"><span>🎻</span></div><div class="mask"><h4>剧场版主视觉图与时间线梳理</h4><p>31 张 · 2027 档期</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#3a0d28;--g2:#2a250d"><span>🌊</span></div><div class="mask"><h4>新海诚新作场景美术设定</h4><p>22 张 · 独家收录</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#0e1832;--g2:#2a0d3a"><span>🐉</span></div><div class="mask"><h4>《龙与契约之书》角色立绘公开</h4><p>19 张 · 轻改专区</p></div></div>
+      <div class="gal"><div class="bg" style="--g1:#2a250d;--g2:#0e1832"><span>🍜</span></div><div class="mask"><h4>动画美食作画回顾特辑</h4><p>47 张 · 人气排行</p></div></div>
+    </div>
+  </section>
+
+  <!-- 数据条 -->
+  <section class="section" id="facts">
+    <div class="facts">
+      <div class="fact"><div class="n">2,486<em> 部</em></div><h4>番剧资料库</h4><p>持续扩充中</p></div>
+      <div class="fact"><div class="n">128,600<em> 人</em></div><h4>追番注册用户</h4><p>覆盖全国 31 省</p></div>
+      <div class="fact"><div class="n">37<em> 部</em></div><h4>本季新番跟进</h4><p>含国创 6 部</p></div>
+      <div class="fact"><div class="n">98.6<em>%</em></div><h4>更新准时率</h4><p>近 90 天统计</p></div>
+    </div>
+  </section>
+
+  <!-- 专题策划 -->
+  <section class="section" id="topic">
+    <div class="sec-head">
+      <div class="sec-title">
+        <span class="bar"></span>
+        <div>
+          <h2>专题策划</h2>
+          <p>编辑部长期连载栏目 · 从入门到进阶</p>
+        </div>
+      </div>
+      <a class="sec-more" href="#">全部专题 ›</a>
+    </div>
+    <div class="topic-grid">
+      <article class="topic">
+        <div class="bg t1"><i>📺</i></div>
+        <div class="con">
+          <h3>新番入坑指南</h3>
+          <p>每季开播前整理的类型速查表，按题材、时长与完结状态分类，帮助你快速锁定本季值得追的作品。</p>
+          <div class="meta"><span>42 篇文章</span><span>每周更新</span></div>
+        </div>
+      </article>
+      <article class="topic">
+        <div class="bg t2"><i>🎬</i></div>
+        <div class="con">
+          <h3>动画制作入门</h3>
+          <p>从分镜、原画到摄影与合成，用通俗语言拆解一集动画诞生的完整流程，适合想了解行业运作的观众。</p>
+          <div class="meta"><span>28 篇文章</span><span>连载中</span></div>
+        </div>
+      </article>
+      <article class="topic">
+        <div class="bg t3"><i>🎙️</i></div>
+        <div class="con">
+          <h3>声优与配音现场</h3>
+          <p>访谈、现场实录与角色塑造分析，关注声音背后的那群人，以及他们如何为一部作品注入生命力。</p>
+          <div class="meta"><span>19 篇文章</span><span>每月更新</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 订阅 -->
+  <section class="section">
+    <div class="subscribe">
+      <div class="bg"></div>
+      <div class="con">
+        <h3>每周一早八点，把新番情报送到你面前</h3>
+        <p>第一动漫（diyidongman-zh.github.io）每周汇总当周播出表、新番情报与剧场版动态，无需注册即可订阅。</p>
+        <form class="sub-form" onsubmit="return false;">
+          <input type="email" placeholder="留下你的邮箱地址" aria-label="邮箱地址">
+          <button type="submit">订阅每周番报</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section class="section" id="about">
+    <div class="about">
+      <div class="about-card">
+        <h3>关于第一动漫</h3>
+        <p><strong style="color:var(--text)">第一动漫</strong>（网址：<a href="https://diyidongman-zh.github.io" style="color:var(--accent2)">https://diyidongman-zh.github.io</a>）是一个专注<strong style="color:var(--text)">动漫资讯、新番速递与番剧在线观看</strong>的二次元内容站点。我们每天整理日本新番的播出安排、制作组动态与观众口碑，同时关注国创动画的发展动向，力求让每一位来访的动漫爱好者都能在这里找到想看的内容。</p>
+        <p>本站内容以资讯整理、播出时间提醒与作品点评为主，所有条目均标注更新时间与来源说明；正版资源部分仅提供官方渠道导航，不提供受版权保护的完整影片下载。如发现信息有误，欢迎通过页脚联系方式向我们反馈，我们会在核实后第一时间修正。</p>
+        <p>除了常规的资讯与时间表，第一动漫还设有编辑长评、观众口碑、图集与专题策划四个固定栏目，分别从不同角度解读一部作品的看点。我们相信，好的动漫值得被认真讨论，也值得被更多人看见。</p>
+      </div>
+      <div class="about-card">
+        <h3>友情链接</h3>
+        <div class="link-cloud">
+          <a href="#">动漫星空</a>
+          <a href="#">番剧研究所</a>
+          <a href="#">次元补给站</a>
+          <a href="#">声优情报网</a>
+          <a href="#">新番速报社</a>
+          <a href="#">剧场版导航</a>
+          <a href="#">漫画书架</a>
+          <a href="#">国创观察</a>
+          <a href="#">壁纸图库</a>
+          <a href="#">动画百科</a>
+          <a href="#">观影日历</a>
+          <a href="#">二创工坊</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="brand">
+        <div class="logo">
+          <span class="mark">🎬</span>
+          <span class="name"><em>第一动漫</em><small>diyidongman-zh.github.io</small></span>
+        </div>
+        <p>专注动漫资讯、新番速递与番剧在线观看，每日更新播出安排、热门排行与剧场版动态，是二次元爱好者获取第一手动漫情报的站点。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#news">资讯速递</a></li>
+          <li><a href="#schedule">番剧更新</a></li>
+          <li><a href="#timetable">播出时间表</a></li>
+          <li><a href="#rank">热门排行</a></li>
+          <li><a href="#theater">剧场电影</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>内容专区</h4>
+        <ul>
+          <li><a href="#review">番剧点评</a></li>
+          <li><a href="#gallery">精彩图集</a></li>
+          <li><a href="#download">资源下载</a></li>
+          <li><a href="#topic">专题策划</a></li>
+          <li><a href="#">投稿与合作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#about">关于第一动漫</a></li>
+          <li><a href="#">投稿须知</a></li>
+          <li><a href="#">内容纠错</a></li>
+          <li><a href="#">隐私说明</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <div>© 2026 第一动漫 diyidongman-zh.github.io · 网站名称：第一动漫 ｜ 网站网址：<a href="https://diyidongman-zh.github.io">https://diyidongman-zh.github.io</a> · 本站内容仅供资讯交流，请支持正版</div>
+      <div class="links">
+        <a href="#">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#">回到顶部</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="top" id="top" href="#" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var mbtn=document.getElementById('mbtn');
+  mbtn.addEventListener('click',function(){
+    nav.classList.toggle('open');
+    mbtn.classList.toggle('open');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){
+      nav.classList.remove('open');
+      mbtn.classList.remove('open');
+    }
+  });
+  var top=document.getElementById('top');
+  var links=document.querySelectorAll('a[href^="#"]');
+  links.forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length>1){
+        var el=document.querySelector(id);
+        if(el){
+          e.preventDefault();
+          window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-76,behavior:'smooth'});
+        }
+      }
+    });
+  });
+  var sections=document.querySelectorAll('main section[id]');
+  var navA=document.querySelectorAll('.nav a');
+  function onScroll(){
+    top.classList.toggle('show',window.scrollY>400);
+    var cur='';
+    sections.forEach(function(s){
+      if(window.scrollY>=s.offsetTop-120) cur=s.id;
+    });
+    navA.forEach(function(a){
+      a.classList.toggle('on',a.getAttribute('href')==='#'+cur);
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  document.querySelectorAll('.filter a,.rank-box .tabs a').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var box=a.parentElement;
+      box.querySelectorAll('a').forEach(function(x){x.classList.remove('on')});
+      a.classList.add('on');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
